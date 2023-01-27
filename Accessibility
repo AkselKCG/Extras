@@ -7,3 +7,7 @@ def change_text_size():
 	editor.text_size = Fsize.value
 	editor.resize(1, 1)
 	editor.resize("fill", "fill")
+
+def text_edit():
+	MainMenu.text_size = Fsize.value# Affects all Text on the program
+	MainMenu.font = Ffont.value
