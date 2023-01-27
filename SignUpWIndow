@@ -17,3 +17,17 @@ text = Text(windowS, text= "Enter New PhoneNumber")
 PhoneNumber_textbox=  TextBox(windowS)
 
 checkbox1 = checkbox = CheckBox(windowS, text="Do you accept the Terms and Conditions")
+
+
+#
+text_blank = Text(windowS, text=" ")
+text_blank = Text(windowS, text=" ")
+open_button = PushButton(windowS, text="Create Account", command=SignupButton) # button on app, main window
+back_button = PushButton(windowS, text="Back", command=BackSignUp )
+windowS.bg = "#a8c0ff"
+text_blank = Text(windowS, text=" ")
+windowS.hide()
+#
+#
+
+MainMenu.display()
