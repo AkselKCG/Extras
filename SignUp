@@ -1,0 +1,32 @@
+def SignupButton(): # function to allow user to enter their personal details # and will then decide whether to allow the user to proceed if their details match the criteria
+	global NewUserID# global variable for userID
+	global String_Encrypt_Password# GLOBAL variable for encrypt password
+	if userSignUp_textbox.value == "":
+		info("Error!", "You must enter a username") # error message because details dont match validation criteria
+	elif len(userSignUp_textbox.value) <= 3:
+		info("Error!", "Username must be longer than 3 characters")# error message because details dont match validation criteria
+	elif len(userSignUp_textbox.value) >= 15:
+		info("Error!", "Username must be below 15 characters")# error message because details dont match validation criteria
+	elif PWSignUp_textbox.value == "":
+		info("Error!", "You must enter a password")# error message because details dont match validation criteria
+	elif len(PWSignUp_textbox.value) <= 3:
+		info("Error!", "Password must be longer than 3 characters")# error message because details dont match validation criteria
+	elif len(PWSignUp_textbox.value) >= 15:
+		info("Error!", "Password must be below 15 characters")# error message because details dont match validation criteria
+	elif Firstname_textbox.value == "":
+		info("Error!", "You must enter a first name")# error message because details dont match validation criteria
+	elif Email_textbox.value == "":
+		info("Error!", "You must enter an email address")# error message because details dont match validation criteria
+	elif "@" and "." not in Email_textbox.value:
+		info("Error!", "Email must have a @ and '.'!")# error message because details dont match validation criteria
+	elif PhoneNumber_textbox.value == "":
+		info("Error!", "You must enter a password")# error message because details dont match validation criteria
+	elif len(PhoneNumber_textbox.value) == 11:
+		info("Error!", "Your number must be atleast 11 integers")# error message because details dont match validation criteria
+	elif checkbox1.value == 0:
+		info("Error!", "By accepting this you agree to comply with the Rules of Membership which are displayed prominently in the Club and relate to opening hours, use of facilities and your conduct")# error message because details dont match validation criteria
+	else:
+		sqlinsert = "insert into Customer_Table (CustUser, CustPass, FirstName, EmailAddress, PhoneNumber) values ('"+userSignUp_textbox.value+"','"+PWSignUp_textbox.value+"','"+Firstname_textbox.value+"', '"+Email_textbox.value+"', '"+PhoneNumber_textbox.value+"');"
+		execute_sql(database_file, sqlinsert) # sql insert which checks if the data matches # execute sql code which will execute the database file
+		info("Success","Your account has been created")
+#
