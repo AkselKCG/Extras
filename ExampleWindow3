@@ -1,0 +1,35 @@
+#################################
+# build Paid Content window     #
+#################################
+Pcontent = Window(MainMenu,title="Paid Content", height = 600)
+text_blank = Text(Pcontent, text=" ")
+text_blank = Text(Pcontent, text=" Welcome to the Paid content page")
+text_blank = Text(Pcontent, text=" ")
+Tracking_Button = PushButton(Pcontent, text="Tracking", command=analysegraph2)
+MealPlan = PushButton(Pcontent, text="Meal Plan", command= MealP)
+WorkoutPlan = PushButton(Pcontent, text="Workout Plan", command= WorkoutPlan )
+SFeatures = PushButton(Pcontent, text="Website for Social Competition", command = Social)
+#
+buttons2_box = Box(Pcontent, width="fill")   #####added box for buttons
+Proteins = PushButton(buttons2_box, text="Protein", align = "left", command = ProINF)
+Carb = PushButton(buttons2_box, text="Carbohydrates", align = "left", command = CarbINF)
+Mineral = PushButton(buttons2_box, text="Minerals", align = "left", command = MinINF)
+Water = PushButton(buttons2_box, text="Water", align = "left", command = WatINF)
+Fat = PushButton(buttons2_box, text="Fats", align = "left", command = FatINF)
+Vitamins = PushButton(buttons2_box, text="Vitamin", align = "left", command = VitINF)
+text_blank = Text(Pcontent, text=" ")
+text_blank = Text(Pcontent, text=" ")
+text_blank = Text(Pcontent, text=" ")
+#
+buttons3_box = Box(Pcontent, width="fill")   #####added box for buttons
+UpperB = PushButton(buttons3_box, text="Upper Body", align = "left", command = UppINF)
+LowerB = PushButton(buttons3_box, text="Lower Body", align = "left", command = LowINF)
+Legs = PushButton(buttons3_box, text="Upper Legs", align = "left", command = LegINF)
+Abbs = PushButton(buttons3_box, text="Abdominals", align = "left", command = AbbINF)
+Arms = PushButton(buttons3_box, text="Biceps", align = "left", command = ArmINF)
+
+
+
+back_buttonPC = PushButton(Pcontent, text="Back", align ="bottom", command=BackPcontent )
+Pcontent.bg ="#a8c0ff"
+Pcontent.hide()
