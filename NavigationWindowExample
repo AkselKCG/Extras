@@ -1,0 +1,17 @@
+#################################
+# build Navigation Form         #
+#################################
+Navigation =Window(MainMenu,title="Main Menu", height = 600)
+text_blank = Text(Navigation, text=" ")
+text_blank = Text(Navigation, text=" Welcome to the ToKa Fitness MainMenu ")
+text_blank = Text(Navigation, text=" ")
+Free_Content = PushButton(Navigation, text="Free Content Workout", command=Free_contentt)
+text_blank = Text(Navigation, text=" ")
+Free_ContentN = PushButton(Navigation, text="Free Content Nutrition", command=Free_contenttN)
+text_blank = Text(Navigation, text=" ")
+Access_Features =  PushButton(Navigation, text="Accessibility Features", command=Accessibility)
+Navigation.bg ="#a8c0ff"
+text_blank = Text(Navigation, text=" ")
+text_blank = Text(Navigation, text=" ")
+pictureP = Picture(Navigation, image="Workout.png")
+Navigation.hide()
