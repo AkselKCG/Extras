@@ -1,0 +1,17 @@
+#######################################
+# build Free Content Nutrition Window #
+#######################################
+FcontentN = Window(MainMenu,title="Free Content", height = 600, width = 600)
+#text_blank = Text(Fcontent, text=" ")
+text_blank = Text(FcontentN, text=" Welcome to the Free content page")
+#text_blank = Text(Fcontent, text=" ")
+WorkoutP = Picture(FcontentN, height = 100, width = 100,  image="Protein.png")
+WorkoutC = Picture(FcontentN, height = 100, width = 100,  image="Carbs.png")
+WorkoutV = Picture(FcontentN, height = 100, width = 100,  image="Vitamin.png")
+eboxx = Box(FcontentN, width = 'fill')
+buttons_boxN = Box(FcontentN, width="fill", align="bottom")
+back_buttonFCN = PushButton(buttons_boxN, text="Back", command=BackFcontentN,)
+
+text_advice = Text(eboxx, text="Reducing muscle loss. Building lean muscle. Helping maintain a healthy weight. Curbing hunger\nCarbohydrates provide the body with glucose, which is converted to energy used to support bodily functions and physical activity.\nVitamins are a group of substances that are needed for normal cell function, growth, and development.", align = 'left')
+FcontentN.bg ="#a8c0ff"
+FcontentN.hide()
