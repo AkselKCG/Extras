@@ -1,0 +1,12 @@
+def Paid_contentt():
+	if AccNum_textbox.value == " ":
+		info("Error", "You must enter a valid Account number ")
+	if SortCode_textbox.value == " ":
+		info("Error", "You must enter a SortCode")
+	elif ExpireDate_textbox.value == " ":
+		info("Error", "You must enter a expiry date")
+	else:
+		info("Valid", "Thank you for subscribing")
+		Prem_Window.hide()
+		Pcontent.show()
+		Navigation.hide()
