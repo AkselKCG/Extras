@@ -1,0 +1,42 @@
+sql = """
+CREATE TABLE "Customer_Table" ( 
+"CustomerID" INTEGER NOT NULL,
+"CustUser" TEXT,
+"CustPass" TEXT,
+"FirstName" TEXT,
+"SecondName" TEXT,
+"EmailAddress" TEXT, 
+"PhoneNumber" INTEGER,
+"CustomerDOB" TEXT,
+PRIMARY KEY("CustomerID" AUTOINCREMENT)
+);
+CREATE TABLE "Booking" (
+"BookingID"  INTEGER NOT NULL,
+"DateBooked" TEXT,
+"DateRequired" TEXT,
+"TimeRequired"  INTEGER,
+"LocationRequired" TEXT,
+"SizeRequired" TEXT,
+"CustomerID" INTEGER,
+PRIMARY KEY("BookingID" AUTOINCREMENT),
+CONSTRAINT "CustomerID"  FOREIGN KEY("CustomerID") REFERENCES "Customer_Table"("CustomerID")
+);
+CREATE TABLE "Seat_Booking" (
+"SeatID" INTEGER NOT NULL,
+"SeatName" TEXT,
+"SeatDay" TEXT,
+"SeatCost" REAL,
+"BookingID" INTEGER,
+PRIMARY KEY("SeatID" AUTOINCREMENT),
+CONSTRAINT "BookingID"  FOREIGN KEY("BookingID") REFERENCES "Seat_Booking"("BookingID")
+);
+insert into Customer_Table (CustUser, CustPass, FirstName, SecondName,  EmailAddress, PhoneNumber, CustomerDOB) values ('AkJohn','ByeBye','Aksel', 'Kesici',  'Aksel.@outlook.com', '07961048778', '13/04/2005');
+insert into Customer_Table (CustUser, CustPass, FirstName, SecondName,  EmailAddress, PhoneNumber, CustomerDOB) values ('JohnAK','SeeBye','John', 'Hello',  'Shush.@outlook.com', '07482086114', '10/06/2005');
+insert into Customer_Table (CustUser, CustPass, FirstName, SecondName,  EmailAddress, PhoneNumber, CustomerDOB) values ('OscarJohn','WhyHow','Oscar', 'Yellow',  'Green.@outlook.com', '029745109117', '03/09/2001');
+insert into Booking (DateBooked, DateRequired, TimeRequired, LocationRequired, SizeRequired, CustomerID) values ('30/04/2023','02/05/2023','19:30','AkselsPitches','7ASide', 1);
+insert into Booking (DateBooked, DateRequired, TimeRequired, LocationRequired, SizeRequired, CustomerID) values ('30/04/2023','02/05/2023','19:30','AkselsPitches','7ASide', 2);
+insert into Seat_Booking (SeatName, SeatDay, SeatCost, BookingID) values ('Row A1','Saturday','40','1');
+insert into Seat_Booking (SeatName, SeatDay, SeatCost, BookingID) values ('Row A2','Friday','40','1');   
+insert into Seat_Booking (SeatName, SeatDay, SeatCost, BookingID) values ('Row C3','Friday','40','2');   
+insert into Seat_Booking (SeatName, SeatDay, SeatCost, BookingID) values ('Row C4','Friday' ,'40','2');   
+"""
