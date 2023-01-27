@@ -1,0 +1,9 @@
+def change_text_size():
+	preferences_controls = Box(Acontent, align="bottom", width="fill", border=True)
+	Fsize = Slider(preferences_controls, align="left", start = 8, end = 42,) # allows user to select what size they want
+	Ffont = Combo(preferences_controls, options=["courier", "times new roman", "verdana"], align="",) # allows user to select the font 
+	editor = TextBox(app, multiline=True, height="fill", width="fill")
+	editor.font = Ffont.value
+	editor.text_size = Fsize.value
+	editor.resize(1, 1)
+	editor.resize("fill", "fill")
