@@ -1,0 +1,14 @@
+#################################
+# build Credit Card window      #
+#################################
+Prem_Window = Window(MainMenu,title="Subscribe For Premium", height = 600)
+text_blank = Text(Prem_Window, text=" ")
+text = Text(Prem_Window, text= "Enter Your Credit Card Number")
+AccNum_textbox = TextBox(Prem_Window)
+text = Text(Prem_Window, text= "Enter Your Sort Code")
+SortCode_textbox = TextBox(Prem_Window)
+text = Text(Prem_Window, text= "Enter Expiry Date")
+ExpireDate_textbox = TextBox(Prem_Window)
+Paid_Content = PushButton(Prem_Window, text="Confirm", command=Paid_contentt)
+Prem_Window.bg ="#a8c0ff"
+Prem_Window.hide()
