@@ -1,0 +1,19 @@
+#################################
+# build UpdatePW window         #
+#################################
+window = Window(MainMenu,title="Update Password", height = 600)
+text_blank = Text(window, text=" ")
+text_blank = Text(window, text=" Forgotten your password? ")
+text_blank = Text(window, text=" ")
+text = Text(window, text= "Enter OLD password")
+Userupdate_textbox = TextBox(window)
+text_blank = Text(window, text=" ")
+text = Text(window, text= "enter NEW password")
+PWupdate_textbox = TextBox(window)  
+text_blank = Text(window, text=" ")
+text_blank = Text(window, text=" ")
+open_button = PushButton(window, text="log in", command=Forgotten_PW) # button on app, main window
+back_buttonPW = PushButton(window, text="Back", command=BackSignUpPW )
+text_blank = Text(window, text=" ")
+window.bg = "#a8c0ff"
+window.hide()
