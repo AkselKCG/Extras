@@ -1,0 +1,18 @@
+#################################
+# build Accessibility window    #
+#################################
+Acontent = Window(MainMenu,title="Accessibility Features", height = 600)
+text_blank = Text(Acontent, text=" ")
+text_blank = Text(Acontent, text=" Welcome to the Accessibility Features page")
+text_blank = Text(Acontent, text=" ")
+Fontsize = PushButton(Acontent, text="Font Size", command=text_edit)
+back_buttonAC = PushButton(Acontent, text="Back", command=BackAccessibility )
+DarkMode = PushButton(Acontent, text="DarkMode", command=DDMode)
+Confirm_buttonAC = PushButton(Acontent, text="Confirm", command= text_edit)
+preferences_controls = Box(Acontent, align="bottom", width="fill", border=True)
+Fsize = Slider(preferences_controls, align="left", start = 8, end = 42,)
+Ffont = Combo(preferences_controls, options=["courier", "times new roman", "verdana"], align="",)
+MainMenu.text_size = Fsize.value
+
+Acontent.bg ="#a8c0ff"
+Acontent.hide()
