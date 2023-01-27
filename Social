@@ -1,0 +1,3 @@
+def Social():
+	URL = "https://www.puregym.com/"
+	webbrowser.open(URL, new = 2, autoraise = True) # this opens the webbrowser with the hyperlinks
