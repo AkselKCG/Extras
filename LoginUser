@@ -1,0 +1,20 @@
+def login_user(): 
+	global userID ## variable needed to know who logged in ##
+	if user_textbox.value == " ":
+		info("Error", "You must enter a valid username")
+	elif PW_textbox.value == " ":
+		info("Error", "You must enter a password")
+	else:
+		#
+		sqlselect = "SELECT * FROM Customer_Table WHERE CustUser = '"+user_textbox.value+"'"
+		rows = query_database(database_file, sqlselect)
+	if len(rows) == 0: ### This checks that the user was found ###
+		info("Error","User Not Found")
+	else:
+		if PW_textbox.value == rows[0][2]:
+			info("Log in","User Password is correct")
+			userID = rows[0][0]
+			Navigation.show()
+			app.hide()
+		else:
+			info("Log in", "Passwords do not match")
