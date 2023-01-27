@@ -1,0 +1,20 @@
+from guizero import App, Window, PushButton, Text, CheckBox, ListBox, TextBox, ButtonGroup, Picture, Combo, Box, info, Slider  #window is second form
+#
+#
+#This is needed for the sql database
+import sqlite3
+from sqlite3 import Error
+import pandas as pd
+import matplotlib.pyplot as plt 
+#Import SQL
+import os
+import os.path
+#Import datetime
+import datetime
+from datetime import date # need this to get date
+from datetime import datetime # needed for strptime()
+#
+import webbrowser
+#
+global Fsize 
+Fsize = 12
