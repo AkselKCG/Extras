@@ -1,0 +1,18 @@
+def analysegraph2():
+	global userID
+	conn= sqlite3.connect ("ToKaFitness.db")
+	c=conn.cursor()
+	#
+	sqldata = "SELECT DateTracking, Steps from Steps_Tracking WHERE CustomerID= '"+str(userID)+"'"
+	c.execute(sqldata)
+	#c.execute("SELECT DateTracking, Steps from Steps_Tracking where CustomerID="+ str(login_user))
+	df=pd.DataFrame(c.fetchall(), columns = ["Date","Steps"])
+	print(df)
+	plt.plot(df['Date'],df['Steps'])
+	plt.xlabel('Date of session')
+	plt.ylabel('Steps Made')
+	plt.title('Analyse Progress')
+	plt.savefig("steps.png")
+	plt.show()
+	plt.close()
+	Tcontent.show()
