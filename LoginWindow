@@ -1,14 +1,22 @@
-##
 #################################
-# build main Menu LOGIN window  #
+# build main login window             #
 #################################
-MainMenu = App(title="ToKaFitness", height = 600)
-text_blank = Text(MainMenu, text=" ")
-text_blank = Text(MainMenu, text=" Welcome to the Login Menu")
-text_blank = Text(MainMenu, text=" ")
-login_button = PushButton(MainMenu, text="log in", command=login)
-text_blank = Text(MainMenu, text=" ")
-createButton = PushButton(MainMenu, text="Sign Up", command=Create_Account)
-MainMenu.bg ="#a8c0ff"
-text_blank = Text(MainMenu, text=" ")
-text_blank = Text(MainMenu, text=" ")
+
+app = Window(MainMenu,title="ToKa Fitness", height = 600) # guizero title 
+text_blank = Text(app, text=" ")
+text_blank = Text(app, text=" Welcome to ToKaFitness App ")
+text_blank = Text(app, text=" ")
+text = Text(app, text= "enter user name")
+user_textbox = TextBox(app)
+text_blank = Text(app, text=" ")
+text = Text(app, text= "enter user Password")
+PW_textbox = TextBox(app)   # text boxes that allow user to enter details into the required boxes
+#
+text_blank = Text(app, text=" ")
+text_blank = Text(app, text=" ")
+open_button = PushButton(app, text="log in", command=login_user) # button on app, main window
+text_blank = Text(app, text=" ")
+text_Forgotten = PushButton(app, text="Forgotten Password?", width = 20, height = 1, command=Forgotten_Pass)
+app.bg = "#a8c0ff"
+text_blank = Text(app, text=" ")
+app.hide()
