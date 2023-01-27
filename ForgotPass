@@ -1,0 +1,8 @@
+def Forgotten_PW():
+	global userID
+	info('well done','You have updated your password')#open forgotten password window 
+	UpdateDataSQL = "UPDATE Customer_Table SET CustPass = '"+str(PWupdate_textbox.value)+"'  WHERE CustomerID = '"+str(userID)+"'" #Update password in sql database
+	execute_sql(database_file, UpdateDataSQL)
+
+def Forgotten_Pass():
+	window.show()
