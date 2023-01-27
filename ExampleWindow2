@@ -1,0 +1,27 @@
+#####################################
+# build Free Content Workout Window #
+#####################################
+
+Fcontent = Window(MainMenu,title="Free Content", height = 600, width = 600)
+#
+text_blank = Text(Fcontent, text=" Welcome to the Free content page")
+#
+WorkoutU = Picture(Fcontent, height = 100, width = 100,  image="UpperBody.png")
+WorkoutL = Picture(Fcontent, height = 100, width = 100,  image="LowerBody.png")
+WorkoutA = Picture(Fcontent, height = 100, width = 100,  image="Abb.png")
+#
+ebox = Box(Fcontent, width = 'fill')
+#
+
+#
+buttons_box = Box(Fcontent, width="fill", align="bottom")   #####added box for buttons
+Advice_button = PushButton(buttons_box, text="Get More Advice", command=Prem_sell, align="left")   # button to add new session
+Prem_button = PushButton(buttons_box, text="Get Premium Now", command=getpremium, align="left")   #######align save new session
+back_buttonFC = PushButton(buttons_box, text="Back", command=BackFcontent, align = 'left' )
+
+
+#
+#
+text_advice = Text(ebox, text="Gym beginners can build upper body strength by doing compound upper body exercises like push ups and assisted pullups.\n Try to work your upper body twice per week with weights that challenge you.\nUsing heavier weights with lower reps is often recommended for building strength. .", align = 'left')
+Fcontent.bg ="#a8c0ff"
+Fcontent.hide()
