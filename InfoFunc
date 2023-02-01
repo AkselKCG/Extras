@@ -1,0 +1,8 @@
+def ProINF():
+	info("Proteins","Proteins are made up of chemicals called amino acids. Your body uses amino acids to build and repair muscles and bones and to make hormones and enzymes!") ## info messages describing these topics
+##
+def CarbINF():
+	info("Carbohydrates","Carbohydrates are your body's main source of energy: They help fuel your brain, kidneys, heart muscles, and central nervous system.!")## info messages describing these topics
+##
+def MinINF():
+	info("Minerals","Minerals are necessary for 3 main reasons: building strong bones and teeth. controlling body fluids inside and outside cells. turning the food you eat into energy.!")## info messages describing these topics
