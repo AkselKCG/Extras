@@ -1,0 +1,31 @@
+sql = """
+CREATE TABLE "Customer_Table" ( 
+"CustomerID" INTEGER NOT NULL,
+"CustUser" TEXT,
+"CustPass" TEXT,
+"FirstName" TEXT,
+"EmailAddress" TEXT, 
+"PhoneNumber" INTEGER,
+"Paid" BOOLEAN,
+PRIMARY KEY("CustomerID" AUTOINCREMENT)
+);
+CREATE TABLE "Steps_Tracking" (
+"TrackID"  INTEGER NOT NULL,
+"DateTracking" DATE,
+"Steps"  INTEGER,
+"CustomerID" INTEGER,
+PRIMARY KEY("TrackID" AUTOINCREMENT),
+CONSTRAINT "CustomerID"  FOREIGN KEY("CustomerID") REFERENCES "Customer_Table"("CustomerID")
+);
+insert into Customer_Table (CustUser, CustPass, FirstName, EmailAddress, PhoneNumber, Paid) values ('AkJohn','ByeBye','Aksel', 'Aksel.@outlook.com', '07961048778', '1');
+insert into Customer_Table (CustUser, CustPass, FirstName, EmailAddress, PhoneNumber, Paid) values ('JohnAK','SeeBye','John', 'Shush.@outlook.com', '07482086114', '0');
+insert into Customer_Table (CustUser, CustPass, FirstName, EmailAddress, PhoneNumber, Paid) values ('OscarJohn','WhyHow','Oscar', 'Green.@outlook.com', '029745109117', '1');
+insert into Steps_Tracking (DateTracking, Steps, CustomerID) values ('30/04/2023', '1000', 1);
+insert into Steps_Tracking (DateTracking, Steps, CustomerID) values ('10/05/2023', '1500', 1);
+insert into Steps_Tracking (DateTracking, Steps, CustomerID) values ('25/05/2023', '2000', 1);
+"""
+
+#
+#
+database_file = 'ToKaFitness.db'
+#
