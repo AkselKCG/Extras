@@ -1,0 +1,15 @@
+def SumSeats():
+    SQLSum = "SELECT SUM(SeatCost) FROM Seat_Booking"
+    rows= query_database(database_file, SQLSum)
+    #info box for UX    
+    total2 = rows[0][0]
+    info("Count","You have made " + str(total2) + " in ticket prices ")
+#
+#
+#
+def DaySeats():
+    SQLDay = "SELECT SUM(SeatCost) FROM Seat_Booking WHERE SeatDay = "Friday""
+    rows= query_database(database_file, SQLDay)
+    #info box for UX    
+    total3 = rows[0][0]
+    info("Count","There was " + str(total3) + " sold on " + str(total3))
