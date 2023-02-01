@@ -1,0 +1,6 @@
+def TotalSeats():
+    SQLSeats = "SELECT COUNT(SeatID) FROM Seat_Booking"
+    rows= query_database(database_file, SQLSeats)
+    #info box for UX    
+    total1 = rows[0][0]
+    info("Count","You have sold " + str(total1) + " tickets in total")
